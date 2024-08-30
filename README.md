@@ -32,7 +32,7 @@ Some of the features in the dataset include:
 
 ### Class Labels and Their Meanings
 
-The `label` in the dataset identifies whether a connection is "normal" or an attack. If it is an attack, the label also specifies the type of attack. Below is an explanation of each unique class label:
+The `label` in the dataset identifies whether a connection is "normal" or an attack. If it is an attack, the label also specifies the type of attack. Below is an explanation of each attack type:
 
 - **normal**: Represents regular, non-malicious network traffic.
 - **neptune**: A type of Denial of Service (DoS) attack where many SYN packets are sent to a target, overwhelming it.
@@ -73,8 +73,6 @@ The `label` in the dataset identifies whether a connection is "normal" or an att
 
 ### Model Performance Summary
 
-The models were evaluated using various metrics, including accuracy, precision, recall, and F1-score. Below is a summary of the model performances:
-
 | Model          | Accuracy | Precision (Macro Avg) | Recall (Macro Avg) | F1-Score (Macro Avg) |
 |----------------|----------|-----------------------|--------------------|----------------------|
 | GaussianNB     | 0.6254   | 0.3333                | 0.4023             | 0.3321               |
@@ -86,4 +84,8 @@ The models were evaluated using various metrics, including accuracy, precision, 
 ## Discussion
 
 This project demonstrates the application of machine learning models to classify network traffic into normal or attack categories using the NSL-KDD dataset. Ensemble methods like Random Forest are particularly effective for this type of task, offering both high accuracy and balanced performance across multiple metrics. Decision Trees also perform well, providing insight into how the model makes its decisions. Models like SVM may struggle with this dataset, indicating the importance of model selection and tuning in the context of NIDS. Additionally, feature importance analysis shows that network traffic metrics such as the number of bytes sent and connection status flags are crucial for detecting intrusions.
+
+## Work in Progress
+
+The presence of highly correlated features might suggest the need for dimensionality reduction techniques, such as Principal Component Analysis (PCA), to prevent redundancy in the model. Alternatively, one could select a subset of these correlated features to simplify the model without losing much predictive power.
 
