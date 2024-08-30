@@ -1,5 +1,7 @@
 # Network Intrusion Detection Evaluation 
 
+[Project Notebook](https://github.com/SMozaffar/Network-intrusion-analysis/blob/main/network-analysis.ipynb)
+
 ## Project Overview
 
 This project involves the analysis and evaluation of a Network Intrusion Detection System (NIDS) using the NSL-KDD dataset. The NSL-KDD dataset is an improved version of the original KDD Cup 1999 dataset, designed to evaluate the performance of NIDS. The main goal of this project is to apply various machine learning models to classify network traffic as either normal or one of several types of attacks. The models evaluated in this project include:
@@ -81,7 +83,7 @@ The models were evaluated using various metrics, including accuracy, precision, 
 | SVM            | 0.4567   | 0.0535                | 0.0500             | 0.0425               |
 | DecisionTree   | 0.9752   | 0.6241                | 0.6478             | 0.6244               |
 
-## Conclusion
+## Discussion
 
-This project demonstrates the application of machine learning models to classify network traffic into normal or attack categories using the NSL-KDD dataset. The results highlight the effectiveness of models like Random Forest and Decision Tree in identifying different types of network attacks. The insights gained from this analysis can be used to enhance the detection capabilities of network intrusion detection systems.
+This project demonstrates the application of machine learning models to classify network traffic into normal or attack categories using the NSL-KDD dataset. Ensemble methods like Random Forest are particularly effective for this type of task, offering both high accuracy and balanced performance across multiple metrics. Decision Trees also perform well, providing insight into how the model makes its decisions. Models like SVM may struggle with this dataset, indicating the importance of model selection and tuning in the context of NIDS. Additionally, feature importance analysis shows that network traffic metrics such as the number of bytes sent and connection status flags are crucial for detecting intrusions.
 
